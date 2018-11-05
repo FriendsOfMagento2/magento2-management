@@ -1,6 +1,6 @@
 <?php
 
-namespace Comunicart\Reset\Console\Command;
+namespace FriendsOfMagento2\Management\Console\Command;
 
 use FriendsOfMagento2\Management\Model\Customers;
 use Symfony\Component\Console\Input\InputInterface;

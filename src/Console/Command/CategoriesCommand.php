@@ -2,6 +2,7 @@
 
 namespace FriendsOfMagento2\Management\Console\Command;
 
+use FriendsOfMagento2\Management\Model\Categories;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
@@ -26,7 +27,7 @@ class CategoriesCommand extends AbstractCommand
         parent::execute($input, $output);
         $output->setDecorated(true);
 
-        $sync = $this->objectManager->get(\FriendsOfMagento2\Management\Model\Categories::class);
+        $sync = $this->objectManager->get(Categories::class);
         $sync->setOutput($output);
         $sync->reset();
     }

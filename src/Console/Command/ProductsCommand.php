@@ -2,6 +2,7 @@
 
 namespace FriendsOfMagento2\Management\Console\Command;
 
+use FriendsOfMagento2\Management\Model\Products;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
@@ -24,7 +25,8 @@ class ProductsCommand extends AbstractCommand
     {
         parent::execute($input, $output);
         $output->setDecorated(true);
-        $sync = $this->objectManager->get('Comunicart\Reset\Model\Products');
+
+        $sync = $this->objectManager->get(Products::class);
         $sync->setOutput($output);
         $sync->reset();
     }

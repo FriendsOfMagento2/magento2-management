@@ -2,6 +2,7 @@
 
 namespace Comunicart\Reset\Console\Command;
 
+use FriendsOfMagento2\Management\Model\Customers;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
@@ -26,7 +27,7 @@ class CustomersCommand extends AbstractCommand
         parent::execute($input, $output);
         $output->setDecorated(true);
 
-        $sync = $this->objectManager->get('Comunicart\Reset\Model\Customers');
+        $sync = $this->objectManager->get(Customers::class);
         $sync->setOutput($output);
         $sync->reset();
     }

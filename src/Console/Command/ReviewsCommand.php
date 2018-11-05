@@ -2,10 +2,11 @@
 
 namespace FriendsOfMagento2\Management\Console\Command;
 
+use FriendsOfMagento2\Management\Model\Reviews;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class Reviews extends AbstractCommand
+class ReviewsCommand extends AbstractCommand
 {
 
     /**
@@ -25,7 +26,8 @@ class Reviews extends AbstractCommand
     {
         parent::execute($input, $output);
         $output->setDecorated(true);
-        $sync = $this->objectManager->get('Comunicart\Reset\Model\Reviews');
+
+        $sync = $this->objectManager->get(Reviews::class);
         $sync->setOutput($output);
         $sync->reset();
     }

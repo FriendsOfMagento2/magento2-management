@@ -17,6 +17,11 @@ Enable module:
 
 `php bin/magento module:enable FriendsOfMagento2_Management`
 
+
+Disable module:
+
+`php bin/magento module:disable FriendsOfMagento2_Management`
+
 # Usage
 
 `php bin/magento fom:mngt:categories`: Reset categories in database
@@ -28,3 +33,4 @@ Enable module:
 `php bin/magento fom:mngt:products`: Reset products in database
 
 `php bin/magento fom:mngt:reviews`: Reset reviews in database
+

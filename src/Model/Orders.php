@@ -2,8 +2,6 @@
 
 namespace FriendsOfMagento2\Management\Model;
 
-use FriendsOfMagento2\Management\Model\StoreManagerInterface;
-
 class Orders extends AbstractReset
 {
     /**
@@ -14,7 +12,7 @@ class Orders extends AbstractReset
     public function __construct(
         \Magento\Framework\App\ResourceConnection $resource,
 	    \Magento\Indexer\Model\IndexerFactory $indexerFactory,
-        StoreManagerInterface $storeManager,
+        \Magento\Store\Model\StoreManagerInterface $storeManager,
         \Magento\Framework\Event\ManagerInterface $eventManager
     )
     {
